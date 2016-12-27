@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="gratitudeApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Make Gratitude an everyday practice. A simple, daily use app that keeps your notes personal">
+    <title>Gratitude rocks!</title>
+    <link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="app.css?ts=300415">
+    <link rel="author" href="/humans.txt">
+</head>
+
+<body ng-controller="gratitudeApp.controller">
+<section class="curtain" ng-show="newvisitor">
+
+    <h1>Congratulations!</h1>
+    <h2>You are taking the right step towards a better life</h2>
+
+    <p>We have created a sample gratitude note for you. Go ahead, create more of your own.</p>
+    <p>What you share here is private to you. It stays only on this browser.</p>
+    
+    <div class="btn-close" ng-click="newvisitor=false">Continue</div>
+
+</section>
+  <section id="notes" ng-class="{'new-visitor':newvisitor==true}">
+      <h1>Your gratitude notes</h1>
+      <ul>
+        <li ng-repeat="notes in journal track by $index">
+          <a href="#">
+            <h2><span ng-click="removeNote(notes.note, $index)" style="float:left; color:maroon;" title="Delete this note">&#10006;</span>{{notes.date | date:'fullDate'}}</h2>
+            <p>{{notes.note}}</p>
+          </a>
+        </li>
+      </ul>    
+  </section>
+    <div class="container">
+        <div class="compose">
+            <button id="addbtn">
+                <div id="in22" class="btn"></div>
+            </button>
+        </div>
+        <div id="box">
+            <form id="createForm" name="createForm" ng-submit="addMore()" novalidate>
+                <input type="text" name="newNote" id="inptarea" id="inptarea" ng-model="textField" placeholder="Start with, I am thankful..." maxlength="60" required>
+                <input type="submit" id="inpbutton" value="Stick it" ng-disabled="createForm.newNote.$invalid">
+                <input type="button" id="resbutton" value="Discard">
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-45068103-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
