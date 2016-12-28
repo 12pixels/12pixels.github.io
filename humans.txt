@@ -1,0 +1,31 @@
+                            
+/* TEAM */
+                            
+Your title: MADHouse Life Architects - Anila & Mahesh Damodhar.
+                           
+Site: http://12pixels.github.io
+                            
+Twitter: @insideMADHouse, @blissbeingnil
+                            
+Location: Bangalore, INDIA
+                 
+[...]
+						
+
+							
+/* THANKS */
+							
+Name: Christian Heilmann for the scaffolding markup and stylesheet
+
+
+
+/* SITE */
+                            
+Last update: 2015/04/28 
+                            
+Standards: HTML5, CSS3
+                            
+Components: HTML5 boilerplate, jQuery, AngularJS.
+                            
+Software: Sublime Text3		
+                 
