@@ -1,4 +1,4 @@
-/*Authors: Christian Heilmann, Mahesh Damodhar*/
+./*Authors: Christian Heilmann, Mahesh Damodhar*/
 *{
   margin:0;
   padding:0;
@@ -159,7 +159,7 @@ ol li a{color:#fff;}
 
 section.curtain {  
   background-color:#fbc02d;
-  opacity:0.9;
+  opacity:0.94;
   color:white;
   font-size:150%;
   text-align:center;
