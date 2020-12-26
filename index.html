@@ -18,12 +18,12 @@
 
     <p>We have created a sample gratitude note for you. Go ahead, create more of your own.</p>
     <p>What you share here is private to you. It stays only on this browser.</p>
-    
+
     <div class="btn-close" ng-click="newvisitor=false">Continue</div>
 
 </section>
   <section id="notes" ng-class="{'new-visitor':newvisitor==true}">
-      <h1>Your gratitude notes</h1>
+      <h1>My gratitude notes</h1>
       <ul>
         <li ng-repeat="notes in journal track by $index">
           <a href="#">
@@ -31,7 +31,7 @@
             <p>{{notes.note}}</p>
           </a>
         </li>
-      </ul>    
+      </ul>
   </section>
     <div class="container">
         <div class="compose">
