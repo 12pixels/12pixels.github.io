@@ -2,17 +2,7 @@ var app=angular.module('gratitudeApp',['ngResource']),
 	storage=window.localStorage;
 
 app.controller('gratitudeApp.controller',function(Journal, $scope, $location){
-	$scope.journal=[{"date":1426250260000,"note":"i am thankful for the beautiful sunshine that fills my house"},
-{"date":1425913240000,"note":"i am thankful for the abundance of wealth in my life"}];
 
-	if(storage.journal){
-		$scope.journal=JSON.parse(storage.journal);
-		$scope.newvisitor=false;
-	}else{
-		$scope.newvisitor=true;
-		storage.journal=JSON.stringify($scope.journal);	
-	}
-	$scope.textField = '';
 
 $scope.addMore = function(){
 if ($scope.textField != '') {
@@ -20,8 +10,8 @@ if ($scope.textField != '') {
 		date:this.getDate(),
 		note:$scope.textField
 	});
-	storage.journal=JSON.stringify($scope.journal)	
-	$scope.textField = '';	
+	storage.journal=JSON.stringify($scope.journal)
+	$scope.textField = '';
 }
 else
 	console.log('invalid!');
@@ -33,10 +23,22 @@ $scope.getDate = function() {
 }
 $scope.removeNote = function(note, index){
 	this.journal.splice(index,1);
-	storage.journal=JSON.stringify($scope.journal)	
+	storage.journal=JSON.stringify($scope.journal)
 	console.log(index+". "+note+" (removed!)");
 }
+    $scope.journal=[{"date":1426250260000,"note":"I am thankful for the beautiful sunshine that fills my house"},{"date":1425913240000,"note":"I am thankful for the abundance of wealth in my life"}];
+    //alert($scope.getDate());
 
+    if(storage.journal){
+        $scope.journal=JSON.parse(storage.journal);
+        $scope.newvisitor=false;
+    }else{
+        $scope.journal[0].date = $scope.journal[1].date = $scope.getDate();
+        // alert($scope.journal[0].note);
+        $scope.newvisitor=true;
+        storage.journal=JSON.stringify($scope.journal);
+    }
+    $scope.textField = '';
 }); //end of controller
 
 app.factory('Journal', function($resource){
@@ -53,7 +55,7 @@ app.factory('Journal', function($resource){
 		}else{
 			document.getElementById('addbtn').parentElement.style.opacity="1";
 			document.getElementById('box').style.opacity="0";
-			document.getElementById('inptarea').value="";			
+			document.getElementById('inptarea').value="";
 		}
 
 	}
