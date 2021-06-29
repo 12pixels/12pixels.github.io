@@ -5,16 +5,19 @@ app.controller('gratitudeApp.controller',function(Journal, $scope, $location){
 
 
 $scope.addMore = function(){
+	$scope.textField = document.getElementById('inptarea').textContent;
 if ($scope.textField != '') {
 	$scope.journal.unshift({
 		date:this.getDate(),
 		note:$scope.textField
 	});
 	storage.journal=JSON.stringify($scope.journal)
-	$scope.textField = '';
+	document.getElementById('box').style.visibility="hidden";
+	document.getElementById('inptarea').textContent = '';
 }
 else
-	console.log('invalid!');
+	
+	console.log('invalid!', $scope);
 }
 $scope.getDate = function() {
 	var d = new Date();
@@ -45,13 +48,14 @@ app.factory('Journal', function($resource){
 	return $resource('notes.json');
 });
 
-	document.getElementById('resbutton').addEventListener("click", function(){ closeMe('box');});
-	document.getElementById('addbtn').addEventListener("click", function(){ closeMe('btn');});
+	document.getElementById('resbutton').addEventListener("click", function(){document.getElementById('box').style.visibility="hidden";});
+	document.getElementById('addbtn').addEventListener("click", function(){closeMe('btn');});
 
 	function closeMe(elem) {
 		if(elem=='btn'){
-			document.getElementById('addbtn').parentElement.style.opacity="0";
-			document.getElementById('box').style.opacity="1";
+			// document.getElementById('addbtn').parentElement.style.opacity="0";
+			document.getElementById('box').style.visibility="visible";
+			document.getElementById('inptarea').focus();
 		}else{
 			document.getElementById('addbtn').parentElement.style.opacity="1";
 			document.getElementById('box').style.opacity="0";

@@ -40,8 +40,10 @@
             </button>
         </div>
         <div id="box">
-            <form id="createForm" name="createForm" ng-submit="addMore()" novalidate>
-                <input type="text" name="newNote" id="inptarea" id="inptarea" ng-model="textField" placeholder="Start with, I am thankful..." maxlength="60" required>
+            <form id="createForm" name="createForm" ng-submit="addMore()" novalidate>   
+                <label for="newNote"><b>Quick tip. </b>Start with - <br/>"I am so grateful and happy that..."</label>
+                <div contenteditable="true" name="newNote" id="inptarea" [(ngModel)]="textField" ngDefaultControl tabindex="0"></div>
+                <!-- <input type="text" name="newNote" id="inptarea" id="inptarea" ng-model="textField" placeholder="Start with, I am thankful..." maxlength="60" required> -->
                 <input type="submit" id="inpbutton" value="Stick it" ng-disabled="createForm.newNote.$invalid">
                 <input type="button" id="resbutton" value="Discard">
             </form>
