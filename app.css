@@ -102,7 +102,6 @@ ul li{
 ul li h2{
   font-size:80%;
   font-weight:normal;
-  text-align: right;
   padding-bottom:10px;
   color:#666;
 }
@@ -149,6 +148,12 @@ ul li a:hover,ul li a:focus{
   position:relative;
   z-index:5;
 }
+ul li a span{
+  display: none;
+}
+ul li a:hover span{
+  display: inline;
+}
 ol{text-align:center;}
 ol li{display:inline;padding-right:1em;}
 ol li a{color:#fff;}
@@ -193,7 +198,7 @@ div.container {
   font-family: "open sans", Arial, Helvetica, sans-serif;
 }
 div#box {
-  background-color: whitesmoke;
+  background-color: transparent;
   position: fixed;
   bottom:0;
   right:0;
@@ -250,7 +255,7 @@ input[type="submit"]#inpbutton, #resbutton {
   font-family: "Sacramento", "Reenie Beanie",helvetica, arial,sans-serif;
   outline: none;
   padding: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   font-size: 180%;
   font-weight: 500;
   color: black;

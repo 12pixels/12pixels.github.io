@@ -27,7 +27,11 @@
       <ul>
         <li ng-repeat="notes in journal track by $index">
           <a href="#">
-            <h2><span ng-click="removeNote(notes.note, $index)" style="float:left; color:maroon;" title="Delete this note">&#10006;</span>{{notes.date | date:'fullDate'}}</h2>
+            <span ng-click="removeNote(notes.note, $index)" style="float:right; color:maroon;" title="Delete this note">&#10006;
+            </span>
+            <h2>
+                {{notes.date | date:'fullDate'}}
+            </h2>
             <p>{{notes.note}}</p>
           </a>
         </li>
