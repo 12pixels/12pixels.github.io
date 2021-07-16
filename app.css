@@ -159,21 +159,21 @@ ol li{display:inline;padding-right:1em;}
 ol li a{color:#fff;}
 
 section.curtain {
-  background-color:#fbc02d;
-  opacity:0.94;
-  color:white;
-  font-size:150%;
-  text-align:center;
-  position:absolute;
-  margin:0;
-  padding:0;
-  top:0;
-  left:0;
-  height:100%;
-  width:100%;
-  display:table;
-  text-shadow:2px 2px #e8b22a;
-  vertical-align:middle;
+  background-color: #fbc02d;
+  opacity: 0.94;
+  color: white;
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: table;
+  text-shadow: 2px 2px #e8b22a;
+  vertical-align: middle;
   z-index: 100;
   line-height: 1.5em;
 }
@@ -241,6 +241,12 @@ input[type="submit"]#inpbutton, #resbutton {
   max-width: 110px;
   margin: 0 auto;
   text-transform: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+input[type="button"]#resbutton {
+  background-color: indianred;
+  text-shadow: none;
 }
 
 @media (max-height: 300px) {
@@ -261,7 +267,7 @@ input[type="submit"]#inpbutton, #resbutton {
   color: black;
   background-color: whitesmoke;
   width: 8em;
-  box-shadow: 5px 5px 7px rgb(33 33 33 / 40%); 
+  box-shadow: -3px -3px 20px rgb(33 33 33 / 30%) 
 }
 #inptarea{
   height: 90%;
@@ -326,17 +332,17 @@ div.compose{
   -webkit-user-drag: none;
 }
 .btn-close {
-  font-size: 0.7em;
+  font-size: 1.2em;
   cursor: pointer;
-  margin-top: 10%;
-  text-shadow:none;
+  margin:0 auto;
+  padding: 0.5em 0;
+  text-shadow: none;
+  background-color: navajowhite;
+  color: #666;
+  width: 50%;
+  border-radius: 1em;
 }
-.btn-close:before {
-  content:"\229B";
-  padding: 0 10px;
-  font-size: 3em;
-  display: block;
-}
+
 #in22 {
   background-image:url(//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_speed_dial_1x.png);
   left: 0;
