@@ -84,8 +84,8 @@ ul li a{
   color:#000;
   background:#ffc;
   display:block;
-  height:13em;
-  width:13em;
+  height:14em;
+  width:14em;
   padding:1em;
   overflow: hidden;
   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
@@ -147,6 +147,8 @@ ul li a:hover,ul li a:focus{
   -o-transform: scale(1.25);
   position:relative;
   z-index:5;
+  width: 15em;
+  height: 15em;
 }
 ul li a span{
   display: none;
