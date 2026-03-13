@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Make Gratitude an everyday practice. A simple, daily use app that keeps your notes personal">
     <title>Gratitude rocks! >> Anila Damodhar</title>
-    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css?ts=300415">
     <link rel="author" href="/humans.txt">
 </head>
@@ -13,13 +15,10 @@
 <body ng-controller="gratitudeApp.controller">
 <section class="curtain" ng-show="newvisitor">
     <div class="container">
-        <h1>Congratulations!</h1>
-        <h2>You are taking the right step towards a better life</h2>
-
-        <p>Gratitude is a daily practice and this application can help you create a gratitude note everyday.</p>
-        <p>What you share here is private to you. It stays only on this browser.</p>
-
-        <div class="btn-close" ng-click="newvisitor=false">Let's Start!</div>
+        <img src="https://img.icons8.com/?size=125&id=46591&format=png" alt="illustration">
+        <h2>Gratitude rocks!</h2>
+        <p>Gratitude is life transforming when you make it a daily practice</p>
+        <div class=" button btn-close" ng-click="newvisitor=false">Start!</div>
     </div>
 </section>
 <section id="notes" ng-class="{'new-visitor':newvisitor==true}">
@@ -36,7 +35,7 @@
         </a>
     </li>
     </ul>
-<div class="container">
+<div class="editor">
     <div class="compose">
         <button id="addbtn">
             <div id="in22" class="btn"></div>

@@ -62,7 +62,7 @@ input#btn-post{
 input#btn-post[type="submit"]:disabled { opacity: 0.22;}
 
 section#notes > h1 {
-  font-family:"Sacramento", "Reenie Beanie",helvetica, arial,sans-serif;
+  font-family:"Sacramento",helvetica, arial,sans-serif;
   font-weight: normal;
   font-size: 2.5em;
   text-align: center;
@@ -161,8 +161,7 @@ ol li{display:inline;padding-right:1em;}
 ol li a{color:#fff;}
 
 section.curtain {
-  background-color: #fbc02d;
-  opacity: 0.94;
+  background-color:#feeb9b;
   color: white;
   font-size: 150%;
   text-align: center;
@@ -193,11 +192,40 @@ section.curtain {
   text-shadow: 1px 1px #e8b22a;
 }
 /*Editor styles*/
-div.container {
-  width: calc(100%-80px);
-  margin:0 auto;
-  padding:10px;
-  font-family: "open sans", Arial, Helvetica, sans-serif;
+.container {
+  display: grid;
+  justify-content: space-around;
+  padding: 3em 0;
+  border: 2px dashed #DAF7A6;
+  border-radius: 0.5em;
+  border-style:dotted;
+  background-color: white;
+  font-family: 'Merriweather', serif;
+}
+.container * {
+  justify-self:center;
+  text-align: center;
+}
+.container h2 {
+  font-size: 10vmin;
+  font-family: 'Sacramento', cursive;
+  margin-bottom: 0.25em;
+  color: #4B0082;
+}
+.container p {
+  margin-top: 0;
+  color:#000;
+  text-shadow:2px 2px #feeb9b;
+}
+.container .button {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  padding: 0.5em 2em;
+  background: #FFC300;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: black;
 }
 div#box {
   background-color: transparent;
@@ -333,18 +361,6 @@ div.compose{
   width: 24px;
   -webkit-user-drag: none;
 }
-.btn-close {
-  font-size: 1.2em;
-  cursor: pointer;
-  margin:0 auto;
-  padding: 0.5em 0;
-  text-shadow: none;
-  background-color: navajowhite;
-  color: #666;
-  width: 50%;
-  border-radius: 1em;
-}
-
 #in22 {
   background-image:url(//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_speed_dial_1x.png);
   left: 0;
